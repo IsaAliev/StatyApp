@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Bond
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, StateAwareView, AlertStateRepresentable, LoadingStateRepresentable {
+    var model = ViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        bindWithState()
+        model.setup()
     }
-
-
 }
 
