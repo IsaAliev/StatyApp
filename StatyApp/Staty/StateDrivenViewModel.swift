@@ -12,3 +12,5 @@ import Bond
 protocol StateDrivenViewModel {
     var state: Observable<State?> { get set }
 }
+
+typealias StatyViewModel = StateDrivenViewModel & CurrentStateObserver

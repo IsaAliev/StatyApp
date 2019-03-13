@@ -13,8 +13,13 @@ protocol State: class {
     func exit()
 }
 
+protocol StateDelegate {
+    func didExit(_ state: State)
+    func didEnter(_ state: State)
+}
+
 fileprivate struct AssociatedKey {
-    static var delegate = "delegate"
+    static var delegate = "kDelegate"
 }
 
 extension State {

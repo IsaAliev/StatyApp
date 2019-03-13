@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class AlertState: State {
+    var target: AlertStateStrategyProvider?
+    lazy var strategy: AlertStateStrategy? = {
+        return target?.alertStateStrategy()
+    }()
+    
     var message: String = "no"
     var onClose: () -> ()
     
@@ -27,28 +32,28 @@ class AlertState: State {
     }
     
     func enterOn(_ target: Any) {
-        guard let target = target as? AlertStateRepresentable else {
+        guard let target = target as? AlertStateStrategyProvider else {
             return
         }
-        
-        target.showAlertWithMessage(message, onClose: onClose)
+
+        self.target = target
+        strategy?.showAlertWithMessage(message, onClose: onClose)
         delegate?.didEnter(self)
     }
     
     func exit() {}
 }
 
-protocol AlertStateRepresentable {
+protocol AlertStateStrategyProvider {
+    func alertStateStrategy() -> AlertStateStrategy
+}
+
+protocol AlertStateStrategy {
     func showAlertWithMessage(_ message: String, onClose: @escaping () -> ())
 }
 
-extension AlertStateRepresentable where Self: UIViewController {
-    func showAlertWithMessage(_ message: String, onClose: @escaping () -> ()) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
-            onClose()
-        })
-        
-        present(alert, animated: true, completion: nil)
+extension AlertStateStrategyProvider where Self: UIViewController {
+    func alertStateStrategy() -> AlertStateStrategy {
+        return NativeAlertStrategy(self)
     }
 }

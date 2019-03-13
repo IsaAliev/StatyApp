@@ -9,5 +9,8 @@
 import Foundation
 
 protocol StateController {
+    var observer: CurrentStateObserver? { get set }
+    
     func transitTo(_ newState: State)
+    init()
 }

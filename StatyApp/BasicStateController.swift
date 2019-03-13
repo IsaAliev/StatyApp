@@ -13,6 +13,8 @@ class BasicStateController: StateController {
     
     weak var observer: CurrentStateObserver?
     
+    required init() {}
+    
     func transitTo(_ newState: State) {
         newState.delegate = self
         stateQueue.enqueue(newState)

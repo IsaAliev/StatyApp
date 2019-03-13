@@ -18,11 +18,12 @@
 		4354A9572237CE8800F54251 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9562237CE8800F54251 /* LoadingState.swift */; };
 		4354A9592237D07700F54251 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9582237D07700F54251 /* StateController.swift */; };
 		4354A95B2237D1CA00F54251 /* BasicStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A95A2237D1CA00F54251 /* BasicStateController.swift */; };
-		4354A95D2237D9C800F54251 /* StateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A95C2237D9C800F54251 /* StateDelegate.swift */; };
 		4354A9632237ECE400F54251 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9622237ECE400F54251 /* Queue.swift */; };
 		4354A9652237F08800F54251 /* StateDrivenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9642237F08800F54251 /* StateDrivenViewModel.swift */; };
 		4354A9672237F1F000F54251 /* StateAwareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9662237F1F000F54251 /* StateAwareView.swift */; };
 		4354A9692237F2BB00F54251 /* CurrentStateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9682237F2BB00F54251 /* CurrentStateObserver.swift */; };
+		4354A96D2238F95900F54251 /* IndicatorViewLoadingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A96C2238F95900F54251 /* IndicatorViewLoadingStrategy.swift */; };
+		4354A96F2238FE9F00F54251 /* NativeAlertStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A96E2238FE9F00F54251 /* NativeAlertStrategy.swift */; };
 		D40544A593CAACC494F16B50 /* Pods_StatyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59E9360E9164AB374598E18 /* Pods_StatyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,11 +43,12 @@
 		4354A9562237CE8800F54251 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		4354A9582237D07700F54251 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		4354A95A2237D1CA00F54251 /* BasicStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStateController.swift; sourceTree = "<group>"; };
-		4354A95C2237D9C800F54251 /* StateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDelegate.swift; sourceTree = "<group>"; };
 		4354A9622237ECE400F54251 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		4354A9642237F08800F54251 /* StateDrivenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDrivenViewModel.swift; sourceTree = "<group>"; };
 		4354A9662237F1F000F54251 /* StateAwareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAwareView.swift; sourceTree = "<group>"; };
 		4354A9682237F2BB00F54251 /* CurrentStateObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStateObserver.swift; sourceTree = "<group>"; };
+		4354A96C2238F95900F54251 /* IndicatorViewLoadingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorViewLoadingStrategy.swift; sourceTree = "<group>"; };
+		4354A96E2238FE9F00F54251 /* NativeAlertStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAlertStrategy.swift; sourceTree = "<group>"; };
 		F59E9360E9164AB374598E18 /* Pods_StatyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StatyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,25 +85,50 @@
 		4354A93D2237C9CD00F54251 /* StatyApp */ = {
 			isa = PBXGroup;
 			children = (
+				4354A9702238FF7B00F54251 /* AlertState */,
+				4354A96B2238F86D00F54251 /* LoadingState */,
+				4354A96A2238F83B00F54251 /* Staty */,
 				4354A93E2237C9CD00F54251 /* AppDelegate.swift */,
 				4354A9402237C9CD00F54251 /* ViewController.swift */,
 				4354A9422237C9CD00F54251 /* Main.storyboard */,
 				4354A9452237C9CE00F54251 /* Assets.xcassets */,
 				4354A9472237C9CE00F54251 /* LaunchScreen.storyboard */,
 				4354A94A2237C9CE00F54251 /* Info.plist */,
-				4354A9502237CA6B00F54251 /* State.swift */,
-				4354A9522237CAA500F54251 /* AlertState.swift */,
 				4354A9542237CAD200F54251 /* ViewModel.swift */,
-				4354A9562237CE8800F54251 /* LoadingState.swift */,
-				4354A9582237D07700F54251 /* StateController.swift */,
 				4354A95A2237D1CA00F54251 /* BasicStateController.swift */,
-				4354A95C2237D9C800F54251 /* StateDelegate.swift */,
 				4354A9622237ECE400F54251 /* Queue.swift */,
-				4354A9642237F08800F54251 /* StateDrivenViewModel.swift */,
-				4354A9662237F1F000F54251 /* StateAwareView.swift */,
-				4354A9682237F2BB00F54251 /* CurrentStateObserver.swift */,
 			);
 			path = StatyApp;
+			sourceTree = "<group>";
+		};
+		4354A96A2238F83B00F54251 /* Staty */ = {
+			isa = PBXGroup;
+			children = (
+				4354A9662237F1F000F54251 /* StateAwareView.swift */,
+				4354A9682237F2BB00F54251 /* CurrentStateObserver.swift */,
+				4354A9642237F08800F54251 /* StateDrivenViewModel.swift */,
+				4354A9582237D07700F54251 /* StateController.swift */,
+				4354A9502237CA6B00F54251 /* State.swift */,
+			);
+			path = Staty;
+			sourceTree = "<group>";
+		};
+		4354A96B2238F86D00F54251 /* LoadingState */ = {
+			isa = PBXGroup;
+			children = (
+				4354A9562237CE8800F54251 /* LoadingState.swift */,
+				4354A96C2238F95900F54251 /* IndicatorViewLoadingStrategy.swift */,
+			);
+			path = LoadingState;
+			sourceTree = "<group>";
+		};
+		4354A9702238FF7B00F54251 /* AlertState */ = {
+			isa = PBXGroup;
+			children = (
+				4354A9522237CAA500F54251 /* AlertState.swift */,
+				4354A96E2238FE9F00F54251 /* NativeAlertStrategy.swift */,
+			);
+			path = AlertState;
 			sourceTree = "<group>";
 		};
 		67FD2AA1EF6556F2AAC28F69 /* Frameworks */ = {
@@ -241,14 +268,15 @@
 				4354A9592237D07700F54251 /* StateController.swift in Sources */,
 				4354A9552237CAD200F54251 /* ViewModel.swift in Sources */,
 				4354A9532237CAA500F54251 /* AlertState.swift in Sources */,
+				4354A96F2238FE9F00F54251 /* NativeAlertStrategy.swift in Sources */,
 				4354A95B2237D1CA00F54251 /* BasicStateController.swift in Sources */,
 				4354A9632237ECE400F54251 /* Queue.swift in Sources */,
 				4354A9412237C9CD00F54251 /* ViewController.swift in Sources */,
+				4354A96D2238F95900F54251 /* IndicatorViewLoadingStrategy.swift in Sources */,
 				4354A9692237F2BB00F54251 /* CurrentStateObserver.swift in Sources */,
 				4354A93F2237C9CD00F54251 /* AppDelegate.swift in Sources */,
 				4354A9512237CA6B00F54251 /* State.swift in Sources */,
 				4354A9652237F08800F54251 /* StateDrivenViewModel.swift in Sources */,
-				4354A95D2237D9C800F54251 /* StateDelegate.swift in Sources */,
 				4354A9672237F1F000F54251 /* StateAwareView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

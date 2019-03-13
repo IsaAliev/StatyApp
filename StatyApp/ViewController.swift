@@ -9,7 +9,7 @@
 import UIKit
 import Bond
 
-class ViewController: UIViewController, StateAwareView, AlertStateRepresentable, LoadingStateRepresentable {
+class ViewController: UIViewController, StateAwareView, AlertStateStrategyProvider, LoadingStateStrategyProvider {
     var model = ViewModel()
     
     override func viewDidLoad() {
@@ -19,4 +19,3 @@ class ViewController: UIViewController, StateAwareView, AlertStateRepresentable,
         model.setup()
     }
 }
-

@@ -9,20 +9,18 @@
 import Foundation
 import Bond
 
-class ViewModel: StateDrivenViewModel, CurrentStateObserver {
+class ViewModel: StatyViewModel {
     var state = Observable<State?>(nil)
-    var stateController = BasicStateController()
-    
+
     func setup() {
-        stateController.observer = self
+        setupStateController(BasicStateController.self)
         
         let inState = LoadingState()
-
         stateController.transitTo(inState)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            let newState = AlertState(message: "Shakeryau")
-            let oneMoreState = AlertState(message: "wow wow wow")
+            let newState = AlertState(message: "Staty First")
+            let oneMoreState = AlertState(message: "Staty Second")
             let loading = LoadingState()
             
             self.stateController.transitTo(newState)
