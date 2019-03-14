@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import Bond
 
 class ViewModel: StatyViewModel {
-    var state = Observable<State?>(nil)
+    var state = SObservable<State?>(nil)
 
     func setup() {
         setupStateController(BasicStateController.self)

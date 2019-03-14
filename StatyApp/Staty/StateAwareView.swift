@@ -17,12 +17,12 @@ protocol StateAwareView {
 
 extension StateAwareView where Self: UIViewController {
     func bindWithState() {
-        model.state.observeOn(.main).skip(first: 1).observeNext { [weak self] (state) in
+        model.state.observe { [weak self] (state) in
             guard let self = self else {
                 return
             }
             
             state?.enterOn(self)
-            }.dispose(in: bag)
+        }
     }
 }

@@ -24,6 +24,7 @@
 		4354A9692237F2BB00F54251 /* CurrentStateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9682237F2BB00F54251 /* CurrentStateObserver.swift */; };
 		4354A96D2238F95900F54251 /* IndicatorViewLoadingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A96C2238F95900F54251 /* IndicatorViewLoadingStrategy.swift */; };
 		4354A96F2238FE9F00F54251 /* NativeAlertStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A96E2238FE9F00F54251 /* NativeAlertStrategy.swift */; };
+		4354A972223A5B7A00F54251 /* SObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A971223A5B7A00F54251 /* SObservable.swift */; };
 		D40544A593CAACC494F16B50 /* Pods_StatyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59E9360E9164AB374598E18 /* Pods_StatyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		4354A9682237F2BB00F54251 /* CurrentStateObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStateObserver.swift; sourceTree = "<group>"; };
 		4354A96C2238F95900F54251 /* IndicatorViewLoadingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorViewLoadingStrategy.swift; sourceTree = "<group>"; };
 		4354A96E2238FE9F00F54251 /* NativeAlertStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAlertStrategy.swift; sourceTree = "<group>"; };
+		4354A971223A5B7A00F54251 /* SObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SObservable.swift; sourceTree = "<group>"; };
 		F59E9360E9164AB374598E18 /* Pods_StatyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StatyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				4354A9642237F08800F54251 /* StateDrivenViewModel.swift */,
 				4354A9582237D07700F54251 /* StateController.swift */,
 				4354A9502237CA6B00F54251 /* State.swift */,
+				4354A971223A5B7A00F54251 /* SObservable.swift */,
 			);
 			path = Staty;
 			sourceTree = "<group>";
@@ -159,7 +162,6 @@
 				4354A9372237C9CD00F54251 /* Sources */,
 				4354A9382237C9CD00F54251 /* Frameworks */,
 				4354A9392237C9CD00F54251 /* Resources */,
-				E5D2F9E7CA4218FE2486BFBC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,28 +237,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5D2F9E7CA4218FE2486BFBC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-StatyApp/Pods-StatyApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
-				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StatyApp/Pods-StatyApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,6 +246,7 @@
 			files = (
 				4354A9572237CE8800F54251 /* LoadingState.swift in Sources */,
 				4354A9592237D07700F54251 /* StateController.swift in Sources */,
+				4354A972223A5B7A00F54251 /* SObservable.swift in Sources */,
 				4354A9552237CAD200F54251 /* ViewModel.swift in Sources */,
 				4354A9532237CAA500F54251 /* AlertState.swift in Sources */,
 				4354A96F2238FE9F00F54251 /* NativeAlertStrategy.swift in Sources */,

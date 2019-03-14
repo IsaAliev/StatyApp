@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Bond
 
 class ViewController: UIViewController, StateAwareView, AlertStateStrategyProvider, LoadingStateStrategyProvider {
     var model = ViewModel()
@@ -17,5 +16,9 @@ class ViewController: UIViewController, StateAwareView, AlertStateStrategyProvid
         
         bindWithState()
         model.setup()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.model = ViewModel()
+        }
     }
 }

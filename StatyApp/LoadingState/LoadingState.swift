@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Bond
+import UIKit
 
 class LoadingState: State {
     var target: LoadingStateStrategyProvider?
