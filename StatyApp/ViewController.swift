@@ -16,9 +16,5 @@ class ViewController: UIViewController, StateAwareView, AlertStateStrategyProvid
         
         bindWithState()
         model.setup()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            self.model = ViewModel()
-        }
     }
 }
