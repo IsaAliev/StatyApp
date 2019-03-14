@@ -22,7 +22,9 @@ extension StateAwareView where Self: UIViewController {
                 return
             }
             
-            state?.enterOn(self)
+            DispatchQueue.main.async {
+                state?.enterOn(self)
+            }
         }
     }
 }

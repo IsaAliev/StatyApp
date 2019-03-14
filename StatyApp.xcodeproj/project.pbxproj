@@ -90,6 +90,7 @@
 				4354A9702238FF7B00F54251 /* AlertState */,
 				4354A96B2238F86D00F54251 /* LoadingState */,
 				4354A96A2238F83B00F54251 /* Staty */,
+				4354A9622237ECE400F54251 /* Queue.swift */,
 				4354A93E2237C9CD00F54251 /* AppDelegate.swift */,
 				4354A9402237C9CD00F54251 /* ViewController.swift */,
 				4354A9422237C9CD00F54251 /* Main.storyboard */,
@@ -98,7 +99,6 @@
 				4354A94A2237C9CE00F54251 /* Info.plist */,
 				4354A9542237CAD200F54251 /* ViewModel.swift */,
 				4354A95A2237D1CA00F54251 /* BasicStateController.swift */,
-				4354A9622237ECE400F54251 /* Queue.swift */,
 			);
 			path = StatyApp;
 			sourceTree = "<group>";
