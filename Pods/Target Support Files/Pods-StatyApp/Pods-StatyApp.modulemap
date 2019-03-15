@@ -1,6 +1,0 @@
-framework module Pods_StatyApp {
-  umbrella header "Pods-StatyApp-umbrella.h"
-
-  export *
-  module * { export * }
-}
